@@ -39,7 +39,7 @@ After you install Composer, run this command from the directory below the one
 in which you want to install your new Slimdic application.
 
 <code>
-    composer create-project the-matrix/slim-dic-application-skeleton \<my-app-name\>
+    composer create-project the-matrix/slim-dic-example \<my-app-name\>
 </code>
 
 Replace \<my-app-name\> with the desired directory name for your new application. 
