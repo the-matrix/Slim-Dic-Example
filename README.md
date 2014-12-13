@@ -38,9 +38,9 @@ your circumstances e.g.
 After you install Composer, run this command from the directory below the one 
 in which you want to install your new Slimdic application.
 
-<pre>
+<code>
     composer create-project the-matrix/slim-dic-application-skeleton \<my-app-name\>
-</pre>
+</code>
 
 Replace \<my-app-name\> with the desired directory name for your new application. 
 
@@ -48,16 +48,17 @@ The rest of this section comes under the general heading of 'Teaching Grandma to
 but hey - someone out there is a newby!
 
 You'll want to:
+
 * Point your virtual host document root to your new application's `public/` directory.
 
 * Ensure your web server has rights to your root directory. It needs to be able 
 to read and write to the appropriate directories e.g.
 
-<pre>
+<code>
     sudo chgrp -R apache \<my-app-name\>
     sudo chmod -R g+r \<my-app-name\>
     sudo chmod -R g+w \<my-app-name\>/spool
-</pre>
+</code>
 
 ensures that both you and the server can read and write. NB, check the user name
 that your server is running under, something like:
@@ -78,9 +79,9 @@ Dependent on how you have set up your vhost, you may need to add an entry to the
 /etc/hosts file.  I like to set each app I'm developing on it's own dns name so
 typically, I'll add something like
 
-<pre>
+<code>
 127.0.0.1 my-app.localhost
-</pre>
+</code>
 
 to /etc/hosts.  Obviously, the name needs to match your web server vhost name
 
