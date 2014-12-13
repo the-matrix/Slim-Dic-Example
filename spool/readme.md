@@ -1,4 +1,4 @@
-he spool directory is used by the application to cache files:
+The spool directory is used by the application to cache files:
 - the DI container
 - twig templatae renditions
 
