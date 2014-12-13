@@ -1,8 +1,8 @@
 The spool directory is used by the application to cache files:
 - the DI container
-- twig templatae renditions
+- twig templata renditions
 
-and the application log file
+and to write the application log file
 
 Your server needs read/write access to this directory
 
