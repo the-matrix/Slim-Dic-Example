@@ -28,8 +28,8 @@ composer.phar file into /usr/local/bin or your ~/bin directory, dependent on
 your circumstances e.g.
 
 <pre>
-    cd \~\/bin
-    ln -s \/path/to/composer.phar composer
+    cd ~/bin
+    ln -s /path/to/composer.phar composer
     chmod u+x composer
 </pre>
 
