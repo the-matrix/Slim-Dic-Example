@@ -54,11 +54,11 @@ You'll want to:
 * Ensure your web server has rights to your root directory. It needs to be able 
 to read and write to the appropriate directories e.g.
 
-<code>
-    sudo chgrp -R apache \<my-app-name\>
-    sudo chmod -R g+r \<my-app-name\>
-    sudo chmod -R g+w \<my-app-name\>/spool
-</code>
+<pre>
+    sudo chgrp -R apache my-app-name
+    sudo chmod -R g+r my-app-name
+    sudo chmod -R g+w my-app-name/spool
+</pre>
 
 ensures that both you and the server can read and write. NB, check the user name
 that your server is running under, something like:
