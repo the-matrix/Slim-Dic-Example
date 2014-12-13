@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+    DI container definition - factories 
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <!-- String Type Factory -->
+        <service id="stringtype.factory" 
+                 class="chippyash\Type\String\StringType"
+                 public="false"
+                 factory-class="chippyash\Type\TypeFactory" 
+                 factory-method="create"
+            >
+            <argument>string</argument>
+        </service>
+        
+        <!-- Controller Factory -->
+        <service id="controller.factory"
+                 factory-class="Slimdic\Controller\Factory"
+                 factory-method="create"
+                 class="Slimdic\Controller\AbstractController"
+                 public="false">
+            <argument type="service" id="slim.app"/>
+        </service>
+    </services>
+</container>

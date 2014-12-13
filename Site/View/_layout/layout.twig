@@ -1,0 +1,27 @@
+<!-- _layout/layout.twig -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="the-matrix/slim-dic-application-skeleton"/>
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow"> 
+        <meta name="revisit-after" content="1 days"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ashley Kitson"> 
+        <meta name="description" content="Skeleton application to quickly setup and start working on a new 
+Slim Framework application incorporation the power of the Symfony Dependency Injection component">
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+    <body>
+        {% block header %}
+        {% include '_layout/header.twig' %}
+        {% endblock %}
+        <div id="content">
+            {% block main %}{% endblock %}
+        </div>
+        {% block footer %}
+        {% include '_layout/footer.twig' %}
+        {% endblock %}
+    </body>
+</html>
+

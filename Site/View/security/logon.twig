@@ -1,0 +1,15 @@
+{% extends '_layout/layout.twig' %}
+{% block header %}
+    </br></br></br>
+{% endblock %}
+{% block main %}  
+<h1>Logon please</h1>
+<form method="POST" action="/logon">
+    <label for="uid">User Id</label>
+    <input type="text" name="uid"/></br>
+    <label for="pwd">Password</label>
+    <input type="password" name="pwd"/></br>
+    <input type="submit" value="Logon"/>
+</form>
+<p>Look, I know this isn't pretty - it's a demo!</p>
+{% endblock %}

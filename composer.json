@@ -1,0 +1,26 @@
+{
+    "name": "the-matrix/slim-dic-example",
+    "description": "A Slim Framework skeleton application utilising Symfony DIC to create a super thin MVC ",
+    "keywords": ["microframework","mvc","dependency injection", "symfony","slim"],
+    "homepage": "http://the-matrix.github.io",
+    "license": "GPL 3.0",
+    "authors": [
+        {
+            "name": "Ashley Kitson",
+            "email": "ashley@zf4.biz",
+            "homepage":"http://uk.linkedin.com/in/ashleykitson"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "monolog/monolog": "1.*",
+        "slim/views" : "~0",
+        "twig/twig": "1.*",
+        "chippyash/slim-dic": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Site\\": ""
+        }
+    }
+}

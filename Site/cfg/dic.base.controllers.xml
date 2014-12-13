@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+    DI container definition - Controller definitions 
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <imports>
+        <import resource="dic.base.factory.xml"/>
+    </imports>
+    
+    <services>
+        <service id="index.controller.name"
+                 parent="stringtype.factory">
+            <argument>Site\Controller\IndexController</argument>
+        </service>
+        <service id="controller.index"
+                parent="controller.factory"
+                public="true">
+            <argument type="service" id="index.controller.name"/>
+        </service>
+        
+        <service id="security.controller.name"
+                 parent="stringtype.factory">
+            <argument>Site\Controller\SecurityController</argument>
+        </service>
+        <service id="controller.security"
+                parent="controller.factory"
+                public="true">
+            <argument type="service" id="security.controller.name"/>
+            <argument type="collection">
+                <argument type="service" key="authenticator" id="model.authenticator"/>
+            </argument>
+        </service>
+        
+    </services>
+</container>
