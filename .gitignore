@@ -2,4 +2,6 @@ nbproject*
 vendor*
 composer.lock
 .directory
-spool/*
+spool/dic*
+spool/logs*
+spool/tplcache*
