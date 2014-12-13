@@ -24,7 +24,7 @@ This is a PHP5.5+ application
 ## Install Composer
 
 Install [Composer] (https://getcomposer.org/). It is useful to symlink the
-composer.phar file into /usr/local/bine or your ~/bin directory, dependent on
+composer.phar file into /usr/local/bin or your ~/bin directory, dependent on
 your circumstances e.g.
 
 <pre>
