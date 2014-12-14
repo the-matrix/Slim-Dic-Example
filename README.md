@@ -1,7 +1,7 @@
 # the-matrix/slim-dic-application-skeleton
 
 Use this skeleton application to quickly setup and start working on a new 
-[Slim Framework](http://www.slimframework.com/) application incorporation the 
+[Slim Framework](http://www.slimframework.com/) application incorporating the 
 power of the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html). 
 This demo also uses Sensio Labs' [Twig](http://twig.sensiolabs.org) template 
 library, but you don't have to - use Smarty instead, or native PHP for your view 
@@ -13,7 +13,7 @@ I've used the XML variant of the Symfony DIC definition. It's basically the most
 powerful form.  Self validating and packed with those little extras that make 
 XML a joy to use.  If you really must use Yaml to define your DIC, then take a
 look at the supporting chippyash/slim-dic library and create a Builder that will
-handle Yaml.  You might even consider contributing it to the repo! 
+handle Yaml.  You might even consider contributing it to that repo! 
 
 This skeleton application was built for Composer. This makes setting up a new 
 Slim Framework application quick and easy. You are not intended to include this
