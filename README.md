@@ -1,4 +1,4 @@
-# the-matrix/slim-dic-application-skeleton
+# the-matrix/slim-dic-example
 
 Use this skeleton application to quickly setup and start working on a new 
 [Slim Framework](http://www.slimframework.com/) application incorporating the 
