@@ -39,10 +39,16 @@ After you install Composer, run this command from the directory below the one
 in which you want to install your new Slimdic application.
 
 <code>
-    composer create-project the-matrix/slim-dic-example \<my-app-name\>
+    composer create-project -s dev the-matrix/slim-dic-example \<my-app-name\>
 </code>
 
-Replace \<my-app-name\> with the desired directory name for your new application. 
+Replace \<my-app-name\> with the desired directory name for your new application. When the installer
+asks
+<code>
+    Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?
+</code>
+
+then enter 'Y'.
 
 The rest of this section comes under the general heading of 'Teaching Grandma to Suck Eggs',
 but hey - someone out there is a newby!
