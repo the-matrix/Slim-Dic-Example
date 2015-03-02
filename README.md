@@ -98,3 +98,8 @@ be revealed.
 
 So you did the demo.  Now look at the code - it's all in there under the Site directory
 and in the public/index.php file.
+
+## Find more
+
+See [The (PHP) Matrix](http://the-matrix.github.io/packages/) for more PHP packages from
+this author.

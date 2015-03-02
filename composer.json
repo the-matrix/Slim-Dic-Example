@@ -13,10 +13,10 @@
     ],
     "require": {
         "php": ">=5.5",
-        "monolog/monolog": "1.*",
-        "slim/views" : "~0",
-        "twig/twig": "1.*",
-        "chippyash/slim-dic": "dev-master"
+        "monolog/monolog": "~1.12.0",
+        "slim/views" : "~0.1.3",
+        "twig/twig": "1.18.0",
+        "chippyash/slim-dic": "~1.0"
     },
     "autoload": {
         "psr-0": {
