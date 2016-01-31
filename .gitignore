@@ -5,3 +5,4 @@ composer.lock
 spool/dic*
 spool/logs*
 spool/tplcache*
+.idea/

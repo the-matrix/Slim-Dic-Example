@@ -8,15 +8,14 @@
         {
             "name": "Ashley Kitson",
             "email": "ashley@zf4.biz",
-            "homepage":"http://uk.linkedin.com/in/ashleykitson"
+            "homepage":"http://zf4.biz"
         }
     ],
     "require": {
         "php": ">=5.5",
         "monolog/monolog": "~1.12.0",
-        "slim/views" : "~0.1.3",
-        "twig/twig": "1.18.0",
-        "chippyash/slim-dic": "~1.0"
+        "slim/twig-view" : "~1.2",
+        "chippyash/slim-symfony-dic": "dev-master"
     },
     "autoload": {
         "psr-0": {

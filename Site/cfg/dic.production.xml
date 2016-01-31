@@ -6,62 +6,13 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <imports>
+        <import resource="dic.slim.xml"/>
+        <import resource="parameters.production.yml"/>
         <import resource="dic.base.factory.xml"/>
+        <import resource="dic.base.logging.xml"/>
         <import resource="dic.base.controllers.xml"/>
         <import resource="dic.base.models.xml"/>
+        <import resource="dic.base.view.xml"/>
     </imports>
-    
-    <parameters>
-        <parameter key="baseDir">filled before compile by Slimdic\Dic\Builder</parameter>
-        <parameter key="tplCacheDir">filled before compile by Slimdic\Dic\Builder</parameter>
-        <parameter key="logDir">filled before compile by Slimdic\Dic\Builder</parameter>
-        <!-- following assumes you are using Twig -->
-        <parameter key="tplDir">%baseDir%/Site/View</parameter>
-        <parameter key="view.parser.options.charset">utf-8</parameter>
-        <parameter key="view.parser.options.cache">%tplCacheDir%</parameter>
-        <parameter key="view.parser.options.auto_reload">true</parameter>
-        <parameter key="view.parser.options.strict_variables">false</parameter>
-        <parameter key="view.parser.options.autoescape">true</parameter>
-    </parameters>
 
-    <services>
-        <!-- Logging -->
-        <service id="log.handler" 
-                 class="Monolog\Handler\StreamHandler"
-                 public="false">
-            <argument>%logDir%/app.log</argument>
-            <argument type="constant">Monolog\Logger::ERROR</argument>
-        </service>
-        <service id="app.logger" class="Monolog\Logger">
-            <argument>chippyash-app-config</argument>
-            <call method="pushHandler">
-                <argument type="service" id="log.handler"/>
-            </call>
-        </service>
-        
-        <!-- View -->
-        <service id="app.view.ext" class="Slim\Views\TwigExtension" public="false"/>
-        <service id="app.view" class="Slim\Views\Twig">
-            <property name="parserOptions" type="collection">
-                <property key="charset">%view.parser.options.charset%</property>
-                <property key="cache">%view.parser.options.cache%</property>
-                <property key="auto_reload">%view.parser.options.auto_reload%</property>
-                <property key="strict_variables">%view.parser.options.strict_variables%</property>
-                <property key="autoescape">%view.parser.options.autoescape%</property>
-            </property>
-            <property name="parserExtensions" type="service" id="app.view.ext"/>
-            <call method="setTemplatesDirectory">
-                <argument>%tplDir%</argument>
-            </call>
-        </service>
-        
-        <!-- Application -->
-        <service id="slim.app" class="Slim\Slim">
-            <argument type="collection">
-                <argument key="templates.path">%tplDir%</argument>
-            </argument>
-            <property name="view" type="service" id="app.view"/>
-            <property name="log" type="service" id="app.logger"/>
-        </service>        
-    </services>
 </container>

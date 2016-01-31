@@ -9,29 +9,32 @@
  */
 namespace Site\Controller;
 
-use Slimdic\Controller\AbstractController;
-use Slim\Slim;
 use Site\Model\Authenticator;
 use chippyash\Type\String\StringType;
+use Interop\Container\ContainerInterface;
+use Site\Controller\Traits\AfterActionLoggable;
 
 /**
  * Security controller
  */
 class SecurityController extends AbstractController
 {
+    use AfterActionLoggable;
+
     /**
-     * @var Site\Model\Authenticator
+     * @var Authenticator
      */
     protected $authenticator;
-    
+
     /**
      * Constructor
-     * @extend
-     * 
-     * @param Slim $app
-     * @param array $config Configuration for the controller
+     *
+     * @param ContainerInterface $dic
+     * @param array $config     Optional additional configuration
+     *
+     * @throws \Exception
      */
-    public function __construct(Slim $app, array $config = [])
+    public function __construct(ContainerInterface $dic, array $config = [])
     {
         if (!array_key_exists('authenticator', $config)) {
             throw new \Exception('SecurityController expects an Authenticator');
@@ -39,28 +42,33 @@ class SecurityController extends AbstractController
         
         $this->setAuthenticator($config['authenticator']);
         unset($config['authenticator']);
-        parent::__construct($app, $config);
+        parent::__construct($dic, $config);
     }
     
     /**
      * Attempt a logon
      * 
      * @param array $params Arbitrary parameters for the action
+     *
+     * @return ResponseInterface
      */
     public function logonAction(array $params = [])
     {
-        if ($this->request->getMethod() === 'POST') {
+        if ($this->request->isPost()) {
             if ($this->authenticator->authenticate(
-                    new StringType($this->request->post('uid')),
-                    new StringType($this->request->post('pwd'))))
-            {
-                $this->render('logonok.twig');
+                new StringType($params['uid']),
+                new StringType($params['pwd'])
+            )
+            ) {
+                return $this->render('logonok');
             } else {
-                $this->render('logonfail.twig');
+                return $this->render('logonfail');
             }
-        } elseif ($this->request->getMethod() == 'GET') {
-            $this->render('logon.twig');
         }
+        //NB in the case of a GET, we are automatically going to render the
+        //security/logon.twig view as we haven't returned a response, so we don't
+        // need to handle it explicitly.
+        //The routing only allows GET and POST
     }
     
     /**

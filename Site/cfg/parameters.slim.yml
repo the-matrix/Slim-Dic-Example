@@ -1,0 +1,25 @@
+parameters:
+  slim.config.httpVersion: '1.1'
+  slim.config.outputBuffering: append
+  slim.config.determineRouteBeforeAppMiddleware: 0
+  slim.config.displayErrorDetails: 0
+  slim.config.response.defaultContentType: text/html; charset=UTF-8
+  slim.config.response.defaultStatus: 200
+  slim.config.response.chunkSize: 4096
+
+#  You may want to add/amend these response headers for your application
+  slim.config.response.defaultheaders:
+    Content-Type: %slim.config.response.defaultContentType%
+
+#  These are default classes as used by Slim. Change at your own risk
+  slim.config.className.settings: Slim\Collection
+  slim.config.classname.environment: Slim\Http\Environment
+  slim.config.className.request: Slim\Http\Request
+  slim.config.className.response: Slim\Http\Response
+  slim.config.className.headers: Slim\Http\Headers
+  slim.config.className.router: Slim\Router
+  slim.config.className.foundHandler: Slim\Handlers\Strategies\RequestResponse
+  slim.config.className.notFoundHandler: Slim\Handlers\NotFound
+  slim.config.className.errorHandler: Slim\Handlers\Error
+  slim.config.className.notAllowedHandler: Slim\Handlers\NotAllowed
+  slim.config.className.callableResolver: Slim\CallableResolver

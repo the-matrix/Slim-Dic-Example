@@ -1,0 +1,29 @@
+parameters:
+  baseDir: 'filled by preCompile by run.php'
+
+  #
+  # Logging helper.
+  #
+  log.dir: %baseDir%/spool/logs
+  #@see Monolog\Logger for log levels
+  log.level.DEBUG: 100
+  log.level.INFO: 200
+  log.level.NOTICE: 250
+  log.level.WARNING: 300
+  log.level.ERROR: 400
+  log.level.CRITICAL: 500
+  log.level.ALERT: 550
+  log.level.EMERGENCY: 600
+  log.level.app: %log.level.ERROR%
+
+  #
+  # View helper. following assumes you are using Twig
+  #
+  view.tplDir: %baseDir%/Site/View
+  view.parser.options.charset: utf-8
+  #set cache == 0 (false) to switch off caching
+  view.parser.options.cache: %baseDir%/spool/tplcache
+  view.parser.options.auto_reload: 1
+  view.parser.options.strict_variables: 0
+  view.parser.options.autoescape: 1
+  view.fileSuffix: '.twig'

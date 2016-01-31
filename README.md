@@ -1,19 +1,18 @@
 # the-matrix/slim-dic-example
 
 Use this skeleton application to quickly setup and start working on a new 
-[Slim Framework](http://www.slimframework.com/) application incorporating the 
-power of the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html). 
+[Slim Framework 3](http://www.slimframework.com/) application incorporating the 
+power of the [Symfony 2 Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html). 
+
 This demo also uses Sensio Labs' [Twig](http://twig.sensiolabs.org) template 
 library, but you don't have to - use Smarty instead, or native PHP for your view 
 scripts - it's up to you, - just configure the DIC definition files per
 your requirements. (Don't forget to add/remove dependencies in composer.json if
 you do.)
 
-I've used the XML variant of the Symfony DIC definition. It's basically the most
-powerful form.  Self validating and packed with those little extras that make 
-XML a joy to use.  If you really must use Yaml to define your DIC, then take a
-look at the supporting chippyash/slim-dic library and create a Builder that will
-handle Yaml.  You might even consider contributing it to that repo! 
+Also included is a minimal Controller (MVC) implementation, that allows you to seperate
+out the routing from the site application logic.  Again, you don't need to use it if
+you don't want to.
 
 This skeleton application was built for Composer. This makes setting up a new 
 Slim Framework application quick and easy. You are not intended to include this
@@ -98,6 +97,16 @@ be revealed.
 
 So you did the demo.  Now look at the code - it's all in there under the Site directory
 and in the public/index.php file.
+
+And remember, use you've installed this demo template, you can change it without 
+worrying that a `composer update` is going to override any code that you write.  That
+will just update any packages you have defined in your composer.json file.
+
+## More reading
+
+[The Sites Directory](https://github.com/the-matrix/Slim-Dic-Example/blob/master/Sites/readme.md)
+
+[Using the Controller](https://github.com/the-matrix/Slim-Dic-Example/blob/master/Sites/Controller/readme.md)
 
 ## Find more
 

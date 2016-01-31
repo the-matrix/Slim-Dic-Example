@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- 
-    DI container definition - factories 
+    DI container definition - generic factories
 -->
 <container xmlns="http://symfony.com/schema/dic/services"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -9,20 +9,9 @@
         <!-- String Type Factory -->
         <service id="stringtype.factory" 
                  class="chippyash\Type\String\StringType"
-                 public="false"
-                 factory-class="chippyash\Type\TypeFactory" 
-                 factory-method="create"
-            >
-            <argument>string</argument>
-        </service>
-        
-        <!-- Controller Factory -->
-        <service id="controller.factory"
-                 factory-class="Slimdic\Controller\Factory"
-                 factory-method="create"
-                 class="Slimdic\Controller\AbstractController"
-                 public="false">
-            <argument type="service" id="slim.app"/>
-        </service>
+                 factory-class="chippyash\Type\TypeFactory"
+                 factory-method="createString"
+                 public="false"/>
+
     </services>
 </container>
