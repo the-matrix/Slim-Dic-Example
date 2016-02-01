@@ -38,7 +38,7 @@ After you install Composer, run this command from the directory below the one
 in which you want to install your new Slimdic application.
 
 <code>
-    composer create-project -s dev the-matrix/slim-dic-example \<my-app-name\>
+    composer create-project the-matrix/slim-dic-example \<my-app-name\> 2.*
 </code>
 
 Replace \<my-app-name\> with the desired directory name for your new application. When the installer
@@ -48,6 +48,8 @@ asks
 </code>
 
 then enter 'Y'.
+
+(NB. If you want the Slim 2 + Symfony 2 version of this library, use 1.* as the version number above.)
 
 The rest of this section comes under the general heading of 'Teaching Grandma to Suck Eggs',
 but hey - someone out there is a newby!
@@ -112,3 +114,9 @@ will just update any packages you have defined in your composer.json file.
 
 See [The (PHP) Matrix](http://the-matrix.github.io/packages/) for more PHP packages from
 this author.
+
+## History
+
+V1.0.0 Slim 2 + Symfony 2
+
+V2.0.0 Slim 3 + Symfony 2

@@ -13,9 +13,9 @@
     ],
     "require": {
         "php": ">=5.5",
-        "monolog/monolog": "~1.12.0",
+        "monolog/monolog": "~1.12",
         "slim/twig-view" : "~1.2",
-        "chippyash/slim-symfony-dic": "dev-master"
+        "chippyash/slim-symfony-dic": "~1.0"
     },
     "autoload": {
         "psr-0": {
