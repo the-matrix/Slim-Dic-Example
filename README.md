@@ -106,9 +106,9 @@ will just update any packages you have defined in your composer.json file.
 
 ## More reading
 
-[The Sites Directory](https://github.com/the-matrix/Slim-Dic-Example/blob/master/Sites/readme.md)
+[The Site Directory](https://github.com/the-matrix/Slim-Dic-Example/blob/master/Site/readme.md)
 
-[Using the Controller](https://github.com/the-matrix/Slim-Dic-Example/blob/master/Sites/Controller/readme.md)
+[Using the Controller](https://github.com/the-matrix/Slim-Dic-Example/blob/master/Site/Controller/readme.md)
 
 ## Find more
 
