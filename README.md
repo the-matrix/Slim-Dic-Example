@@ -112,11 +112,12 @@ will just update any packages you have defined in your composer.json file.
 
 ## Find more
 
-See [The (PHP) Matrix](http://the-matrix.github.io/packages/) for more PHP packages from
-this author.
+Check out [ZF4 Packages](http://zf4.biz/packages?utm_source=github&utm_medium=web&utm_campaign=blinks&utm_content=slimdicexample) for more packages
 
 ## History
 
 V1.0.0 Slim 2 + Symfony 2
 
 V2.0.0 Slim 3 + Symfony 2
+
+V2.0.1 Add link to packages
