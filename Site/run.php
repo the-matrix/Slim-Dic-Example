@@ -8,7 +8,7 @@
  * @copyright Ashley Kitson, 2016, UK
  * @license GPL V3+ See LICENSE.md
  */
-require '../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 use Site\Model\Environment;
 use Slimdic\Dic\Builder;
