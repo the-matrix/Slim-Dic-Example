@@ -9,7 +9,7 @@
  */
 namespace Site\Model;
 
-use chippyash\Type\String\StringType;
+use Chippyash\Type\String\StringType;
 
 /**
  * Demo authenticator
