@@ -10,7 +10,7 @@
 namespace Site\Controller;
 
 use Site\Model\Authenticator;
-use chippyash\Type\String\StringType;
+use Chippyash\Type\String\StringType;
 use Interop\Container\ContainerInterface;
 use Site\Controller\Traits\AfterActionLoggable;
 

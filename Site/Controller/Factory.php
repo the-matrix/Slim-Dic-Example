@@ -9,7 +9,7 @@
  */
 namespace Site\Controller;
 
-use chippyash\Type\String\StringType;
+use Chippyash\Type\String\StringType;
 use Interop\Container\ContainerInterface;
 
 /**

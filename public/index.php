@@ -6,4 +6,4 @@
  * see Site/run.php for real code
  * @copyright Ashley Kitson, 2016, UK
  */
-include_once '../Site/run.php';
+include_once dirname(__DIR__) . '/Site/run.php';

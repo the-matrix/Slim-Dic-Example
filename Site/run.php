@@ -8,12 +8,12 @@
  * @copyright Ashley Kitson, 2016, UK
  * @license GPL V3+ See LICENSE.md
  */
-require '../vendor/autoload.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 
 use Site\Model\Environment;
 use Slimdic\Dic\Builder;
 use Slimdic\Dic\ServiceContainer;
-use chippyash\Type\String\StringType;
+use Chippyash\Type\String\StringType;
 use Slim\App;
 
 //you might consider moving this to an if/case block dependent on Environment

@@ -8,8 +8,8 @@
     <services>
         <!-- String Type Factory -->
         <service id="stringtype.factory" 
-                 class="chippyash\Type\String\StringType"
-                 factory-class="chippyash\Type\TypeFactory"
+                 class="Chippyash\Type\String\StringType"
+                 factory-class="Chippyash\Type\TypeFactory"
                  factory-method="createString"
                  public="false"/>
 
