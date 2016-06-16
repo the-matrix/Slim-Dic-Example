@@ -23,7 +23,7 @@ parameters:
   view.parser.options.charset: utf-8
   #set cache == 0 (false) to switch off caching
   view.parser.options.cache: %baseDir%/spool/tplcache
-  view.parser.options.auto_reload: 1
-  view.parser.options.strict_variables: 0
-  view.parser.options.autoescape: 1
+  view.parser.options.auto_reload: true
+  view.parser.options.strict_variables: false
+  view.parser.options.autoescape: true
   view.fileSuffix: '.twig'
