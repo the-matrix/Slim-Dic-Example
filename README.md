@@ -123,3 +123,5 @@ V2.0.0 Slim 3 + Symfony 2
 V2.0.1 Add link to packages
 
 V2.0.2 bug fix from [Nigel Greenway](https://github.com/the-matrix/Slim-Dic-Example/pull/1)
+
+V2.0.3 code clean. readme typos. bug fix from [Nigel Greenway](https://github.com/the-matrix/Slim-Dic-Example/pull/2)
