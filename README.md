@@ -1,5 +1,9 @@
 # the-matrix/slim-dic-example
 
+![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
+![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
+![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
+
 Use this skeleton application to quickly setup and start working on a new 
 [Slim Framework 3](http://www.slimframework.com/) application incorporating the 
 power of the [Symfony 2 Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html). 
