@@ -1,8 +1,5 @@
-nbproject*
 vendor*
 composer.lock
-.directory
-spool/dic*
 spool/logs*
 spool/tplcache*
 .idea/

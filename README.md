@@ -100,7 +100,7 @@ be revealed.
 So you did the demo.  Now look at the code - it's all in there under the Site directory
 and in the public/index.php file.
 
-And remember, use you've installed this demo template, you can change it without 
+And remember, once you've installed this demo template, you can change it without 
 worrying that a `composer update` is going to override any code that you write.  That
 will just update any packages you have defined in your composer.json file.
 
