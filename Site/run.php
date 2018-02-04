@@ -31,8 +31,10 @@ if (isset($_ENV['SLIM_MODE'])) {
 }
 //system base directory
 $baseDir = dirname(__DIR__);
-//Name of dic file to load dependent on environment
-$diFileName = new StringType($baseDir . '/Site/cfg/dic.' . Environment::getEnvironmentState() . '.xml');
+//Name of dic file to load dependent on environment and PHP version
+$diFileName = new StringType(
+    $baseDir . '/Site/cfg/' . (PHP_MAJOR_VERSION < 7 ? 'php5' : 'php71') . '/dic.' . Environment::getEnvironmentState() . '.xml'
+);
 
 /**
  * build dic and setup Slim app
@@ -55,7 +57,7 @@ $diFileName = new StringType($baseDir . '/Site/cfg/dic.' . Environment::getEnvir
  * }
  */
 
-Builder::registerPreCompileFunction(function(ServiceContainer $dic) use($baseDir) {
+Builder::registerPreCompileFunction(function($dic) use($baseDir) {
     $dic->setParameter('baseDir', $baseDir);
 });
 

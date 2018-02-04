@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    DI container definition - Basic Slim V3 Usage
+
+    Copy this and the yaml parameters file to your configuration directory
+
+    Use the <imports> directive to include this in your DIC definition
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <imports>
+        <!-- You should not alter the service definitions, alter these parameters if required
+        There are exceptions -see comments below
+        -->
+        <import resource="parameters.slim.yml"/>
+    </imports>
+
+    <!-- Unfortunately Slim is not namespacing its required configuration.  Hence you must
+    be careful not to use the following service names yourself-->
+    <services>
+        <service id="settings" class="%slim.config.className.settings%" public="true">
+            <argument type="collection">
+                <argument key="httpVersion">%slim.config.httpVersion%</argument>
+                <argument key="responseChunkSize">%slim.config.response.chunkSize%</argument>
+                <argument key="outputBuffering">%slim.config.outputBuffering%</argument>
+                <argument key="determineRouteBeforeAppMiddleware">%slim.config.determineRouteBeforeAppMiddleware%</argument>
+                <argument key="displayErrorDetails">%slim.config.displayErrorDetails%</argument>
+            </argument>
+        </service>
+
+        <!-- This fudge is to load the value of php $_SERVER into the environment.
+        In development, you might want load a static server config by replacing
+        the argument type with 'collection' and supplying your own parameters -->
+        <service id="environment" class="%slim.config.className.environment%" public="true">
+            <argument type="service">
+                <service class="stdObject">
+                    <factory class="Slimdic\Dic\Builder" method="getServerConfig"/>
+                </service>
+            </argument>
+        </service>
+
+        <service id="request" class="%slim.config.className.request%" public="true">
+            <factory class="%slim.config.className.request%" method="createFromEnvironment"/>
+            <argument type="service" id="environment"/>
+        </service>
+
+        <service id="response" class="%slim.config.className.response%" public="true">
+            <argument>%slim.config.response.defaultStatus%</argument>
+            <argument type="service">
+                <service class="%slim.config.className.headers%">
+                    <argument>%slim.config.response.defaultheaders%</argument>
+                </service>
+            </argument>
+            <call method="withProtocolVersion">
+                <argument>%slim.config.httpVersion%</argument>
+            </call>
+        </service>
+
+        <service id="router" class="%slim.config.className.router%" public="true"/>
+
+        <service id="foundHandler" class="%slim.config.className.foundHandler%" public="true"/>
+
+        <service id="errorHandler" class="%slim.config.className.errorHandler%" public="true">
+            <argument>%slim.config.displayErrorDetails%</argument>
+        </service>
+
+        <service id="notFoundHandler" class="%slim.config.className.notFoundHandler%" public="true"/>
+
+        <service id="notAllowedHandler" class="%slim.config.className.notAllowedHandler%" public="true"/>
+
+        <service id="callableResolver" class="%slim.config.className.callableResolver%" public="true">
+            <argument type="expression">container</argument>
+        </service>
+
+    </services>
+</container>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+    DI container definition - View Handling - production use
+    @see parameters.production.yml for supporting parameters
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="view.ext" class="Slim\Views\TwigExtension" public="false">
+            <argument type="service" id="router"/>
+            <argument type="service">
+                <service class="stdClass">
+                    <factory service="request" method="getUri"/>
+                </service>
+            </argument>
+        </service>
+
+        <!-- The 'view' service name is dictated by Slim requirements
+            @see http://www.slimframework.com/docs/features/templates.html
+        -->
+        <service id="view" class="Slim\Views\Twig" public="true">
+            <argument>%view.tplDir%</argument>
+            <argument type="collection">
+                <argument key="charset">%view.parser.options.charset%</argument>
+                <argument key="cache">%view.parser.options.cache%</argument>
+                <argument key="auto_reload">%view.parser.options.auto_reload%</argument>
+                <argument key="strict_variables">%view.parser.options.strict_variables%</argument>
+                <argument key="autoescape">%view.parser.options.autoescape%</argument>
+            </argument>
+            <call method="addExtension">
+                <argument type="service" id="view.ext"/>
+            </call>
+        </service>
+    </services>
+</container>

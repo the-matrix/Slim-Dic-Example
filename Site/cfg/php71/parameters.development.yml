@@ -1,0 +1,4 @@
+# Parameter override for development use
+parameters:
+  log.level.app: "%log.level.INFO%"
+  slim.config.displayErrorDetails: 1

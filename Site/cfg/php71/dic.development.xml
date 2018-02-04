@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+    DI container definition - development use
+    Override service and parameter definitions set in the dic.production.xml file
+    if you need to  
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <imports>
+        <import resource="dic.production.xml"/>
+        <import resource="parameters.development.yml"/>
+    </imports>
+</container>

@@ -2,11 +2,14 @@
 
 ![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
 ![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
-![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
+![PHP 7.1](https://img.shields.io/badge/PHP-7-blue.svg)
 
 Use this skeleton application to quickly setup and start working on a new 
 [Slim Framework 3](http://www.slimframework.com/) application incorporating the 
-power of the [Symfony 2 Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html). 
+power of the  [Symfony 2 Dependency Injection component](https://symfony.com/doc/2.8/service_container.html) or
+[Symfony 4 Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html).
+
+Symfony 2 is supported by PHP 5.5. and 5.6.. Symfony 4 is supported by PHP 7.1. 
 
 This demo also uses Sensio Labs' [Twig](http://twig.sensiolabs.org) template 
 library, but you don't have to - use Smarty instead, or native PHP for your view 
@@ -42,10 +45,10 @@ After you install Composer, run this command from the directory below the one
 in which you want to install your new Slimdic application.
 
 <code>
-    composer create-project the-matrix/slim-dic-example \<my-app-name\> 2.*
+    composer create-project the-matrix/slim-dic-example my-app-name 2.*
 </code>
 
-Replace \<my-app-name\> with the desired directory name for your new application. When the installer
+Replace my-app-name with the desired directory name for your new application. When the installer
 asks
 <code>
     Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?
@@ -129,3 +132,5 @@ V2.0.1 Add link to packages
 V2.0.2 bug fix from [Nigel Greenway](https://github.com/the-matrix/Slim-Dic-Example/pull/1)
 
 V2.0.3 code clean. readme typos. bug fix from [Nigel Greenway](https://github.com/the-matrix/Slim-Dic-Example/pull/2)
+
+V2.1.0 Update for PHP 7.1

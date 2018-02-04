@@ -10,7 +10,7 @@
 namespace Site\Controller;
 
 use Chippyash\Type\String\StringType;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 /**
  * Factory class to create controllers

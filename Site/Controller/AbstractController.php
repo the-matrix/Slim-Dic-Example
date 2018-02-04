@@ -9,7 +9,7 @@
  */
 namespace Site\Controller;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -142,7 +142,7 @@ abstract class AbstractController
     {
         $ctrl = (!is_null($controller) ? $controller : $this->controllerName());
         $act = (!is_null($action) ? $action : $this->actionName());
-        $tpl = "{$ctrl}/{$act}" . $this->dic->get('view.fileSuffix');
+        $tpl = "{$ctrl}/{$act}" . $this->dic->getParameter('view.fileSuffix');
         $viewData = (empty($data) ? $this->viewData : $data);
         $sts = (is_null($status) ? 200 : $status);
 
