@@ -134,3 +134,5 @@ V2.0.2 bug fix from [Nigel Greenway](https://github.com/the-matrix/Slim-Dic-Exam
 V2.0.3 code clean. readme typos. bug fix from [Nigel Greenway](https://github.com/the-matrix/Slim-Dic-Example/pull/2)
 
 V2.1.0 Update for PHP 7.1
+
+V2.1.1 update composer - forced by packagist composer.json format change

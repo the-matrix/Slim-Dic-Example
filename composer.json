@@ -3,7 +3,7 @@
     "description": "A Slim Framework skeleton application utilising Symfony DIC to create a super thin MVC ",
     "keywords": ["microframework","mvc","dependency injection", "symfony","slim"],
     "homepage": "http://zf4.biz/packages?utm_source=packagist&utm_medium=web&utm_campaign=blinks&utm_content=slimdicexample",
-    "license": "GPL 3.0",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ashley Kitson",
