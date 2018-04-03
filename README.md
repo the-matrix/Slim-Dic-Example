@@ -1,6 +1,5 @@
 # the-matrix/slim-dic-example
 
-![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
 ![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
 ![PHP 7.1](https://img.shields.io/badge/PHP-7-blue.svg)
 
@@ -9,7 +8,7 @@ Use this skeleton application to quickly setup and start working on a new
 power of the  [Symfony 2 Dependency Injection component](https://symfony.com/doc/2.8/service_container.html) or
 [Symfony 4 Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection/introduction.html).
 
-Symfony 2 is supported by PHP 5.5. and 5.6.. Symfony 4 is supported by PHP 7.1. 
+Symfony 2 is supported by PHP 5.6.. Symfony 4 is supported by PHP 7.1. 
 
 This demo also uses Sensio Labs' [Twig](http://twig.sensiolabs.org) template 
 library, but you don't have to - use Smarty instead, or native PHP for your view 
@@ -25,7 +24,7 @@ This skeleton application was built for Composer. This makes setting up a new
 Slim Framework application quick and easy. You are not intended to include this
 as a composer requirement, but to create a new Composer app with it and move on.
 
-This is a PHP5.5+ application
+This is a PHP5.6+ application
 
 ## Install Composer
 
@@ -45,7 +44,7 @@ After you install Composer, run this command from the directory below the one
 in which you want to install your new Slimdic application.
 
 <code>
-    composer create-project the-matrix/slim-dic-example my-app-name 2.*
+    composer create-project the-matrix/slim-dic-example my-app-name 3.*
 </code>
 
 Replace my-app-name with the desired directory name for your new application. When the installer
@@ -136,3 +135,5 @@ V2.0.3 code clean. readme typos. bug fix from [Nigel Greenway](https://github.co
 V2.1.0 Update for PHP 7.1
 
 V2.1.1 update composer - forced by packagist composer.json format change
+
+V3.0.0 BC Break.  Remove support for PHP <5.6

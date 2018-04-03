@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "php": ">=5.5,<6|~7.1",
+        "php": "~5.6|~7.1",
         "monolog/monolog": "~1.12",
         "slim/twig-view" : "~1.2",
-        "chippyash/slim-symfony-dic": "~2.0"
+        "chippyash/slim-symfony-dic": "~3.0"
     },
     "autoload": {
         "psr-0": {
